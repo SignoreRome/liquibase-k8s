@@ -1,0 +1,31 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "1",
+        "author": "rocketsciense",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "t_liqui",
+              "columns": [
+                {
+                  "column": {
+                    "name": "info",
+                    "value": "3-json type"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "time",
+                    "valueComputed": "localtimestamp"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
