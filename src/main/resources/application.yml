@@ -1,0 +1,18 @@
+server:
+  port: ${port:9090}
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${datasource.url}
+    username: ${datasource.username}
+    password: ${datasource.password}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:/db/changelog/changelog-master.xml
+
+  application:
+    name: liquibase-k8s

@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: rocketscience
+      changes:
+        - insert:
+            tableName: t_liqui
+            columns:
+              - column:
+                  name: info
+                  value: "4-yaml type"
+              - column:
+                  name: time
+                  valueComputed: localtimestamp
