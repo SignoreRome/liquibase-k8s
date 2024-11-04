@@ -1,0 +1,8 @@
+FROM liquibase/liquibase:latest
+
+WORKDIR /liquibase/changelog
+
+# Убедитесь, что эта команда копирует ВСЕ файлы и папки правильно
+COPY src/main/resources/db/changelog/ .
+
+CMD ["liquibase", "update"]
