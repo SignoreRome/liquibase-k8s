@@ -5,6 +5,11 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <includeAll relativeToChangelogFile="true" path="/changesets"/>
+    <changeSet id="1" author="rocketsciense">
+        <insert tableName="t_liqui">
+            <column name="info" value="Liquibase docker"/>
+            <column name="time" valueComputed="localtimestamp"/>
+        </insert>
+    </changeSet>
 
 </databaseChangeLog>
